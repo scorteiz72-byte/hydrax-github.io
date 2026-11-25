@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<title>HydraX AI v3.0 — Setup Guide</title>
+<style>
+:root{--bg:#080d18;--panel:#101a2b;--panel2:#0d1524;--line:#20334e;--blue:#43c8ff;--cyan:#83e5ff;--muted:#9aabc1;--text:#edf7ff;--green:#6de0b1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#123456 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.65 Inter,Segoe UI,Arial,sans-serif}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{width:min(1080px,calc(100% - 32px));margin:auto}
+header{padding:58px 0 34px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+h1{font-size:clamp(36px,7vw,64px);line-height:1.03;margin:12px 0;color:white;letter-spacing:-.04em}
+h1 span{color:var(--blue)}
+.lead{max-width:700px;color:var(--muted);font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.pill{border:1px solid var(--line);background:#0d1a2a;padding:6px 11px;border-radius:999px;color:#c8eaff;font-size:12px}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:28px;padding:30px 0 70px}
+nav{position:sticky;top:18px;align-self:start;background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:17px}
+nav strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:2px 8px 12px}
+nav a{display:block;padding:8px 10px;border-radius:9px;color:#c7d9ed;font-size:13px}
+nav a:hover{background:#14263d;text-decoration:none;color:white}
+main{min-width:0}
+.section{background:linear-gradient(145deg,rgba(18,32,52,.96),rgba(12,21,36,.98));border:1px solid var(--line);border-radius:18px;padding:25px;margin-bottom:18px;box-shadow:0 12px 40px #0002;scroll-margin-top:18px}
+.section-head{display:flex;gap:14px;align-items:center;margin-bottom:15px}
+.num{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#10334b;color:var(--cyan);font-weight:900;border:1px solid #1e5878}
+h2{font-size:22px;line-height:1.2;margin:0}
+h3{font-size:15px;color:var(--cyan);margin:22px 0 7px}
+p{margin:8px 0;color:#c6d5e7}
+ul,ol{padding-left:22px;color:#c6d5e7;margin:8px 0}
+li{padding:3px 0}
+.note{border-left:3px solid var(--blue);background:#0b2032;padding:12px 15px;border-radius:0 10px 10px 0;margin:15px 0;color:#d8efff}
+.warn{border-left-color:#e8b75b;background:#2a2111;color:#f5e7c8}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tile{background:#0b1422;border:1px solid var(--line);border-radius:12px;padding:14px}
+.tile b{display:block;color:white;margin-bottom:4px}
+kbd{display:inline-block;padding:2px 8px;border:1px solid #38516c;border-bottom-width:3px;border-radius:6px;background:#0a1220;color:#e9f7ff;font:600 12px ui-monospace,monospace}
+pre{overflow:auto;background:#070d16;border:1px solid #263c56;border-radius:11px;padding:14px;color:#bdeaff;font-size:13px}
+footer{border-top:1px solid var(--line);padding:24px 0 38px;color:var(--muted);font-size:12px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}nav{position:static}.grid{grid-template-columns:1fr}.section{padding:19px}header{padding-top:40px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="eyebrow">OFX BUILD · USER GUIDE</div>
+  <h1>HydraX AI <span>v3.0</span></h1>
+  <p class="lead">A step-by-step guide to launching the application, completing setup, understanding the controls and configuring the panel.</p>
+  <div class="meta"><span class="pill">Windows 10 / 11 · x64</span><span class="pill">Screen-only capture</span><span class="pill">Version 3.0</span></div>
+ </div>
+</header>
+<div class="wrap layout">
+<nav aria-label="Guide sections">
+ <strong>Guide contents</strong>
+ <a href="#launch">01 · Launch</a>
+ <a href="#login">02 · Sign in</a>
+ <a href="#license">03 · Licence</a>
+ <a href="#wizard">04 · Setup wizard</a>
+ <a href="#engine">05 · Start engine</a>
+ <a href="#controls">06 · In-game controls</a>
+ <a href="#input">07 · Mouse & controller</a>
+ <a href="#process">08 · How it works</a>
+ <a href="#safety">09 · Safety & focus</a>
+ <a href="#pages">10 · Panel pages</a>
+ <a href="#tips">11 · Quick tips</a>
+ <a href="#config">12 · Configuration</a>
+</nav>
+<main>
+<section class="section" id="launch">
+ <div class="section-head"><div class="num">01</div><h2>Launch the application</h2></div>
+ <p>Open <b>HydraX.exe</b>. No separate launcher is required.</p>
+ <div class="note">Keep the <code>runtime</code> folder next to the executable. The EXE will not start correctly on its own without this folder.</div>
+</section>
+<section class="section" id="login">
+ <div class="section-head"><div class="num">02</div><h2>Sign in</h2></div>
+ <ol>
+  <li>When the splash screen appears, enter a username and password.</li>
+  <li>Both are stored locally on this PC. The username appears in the panel sidebar; the password unlocks the panel.</li>
+  <li>Select <b>Remember log in</b> if you want the username pre-filled next time.</li>
+ </ol>
+</section>
+<section class="section" id="license">
+ <div class="section-head"><div class="num">03</div><h2>Activate your licence</h2></div>
+ <ol>
+  <li>The activation window displays your hardware ID.</li>
+  <li>Press <b>COPY</b> and provide the ID to Blizly.</li>
+  <li>Paste the returned licence key into the activation window.</li>
+ </ol>
+ <p>The key is tied to that machine and is stored in <code>runtime\license.dat</code>.</p>
+</section>
+<section class="section" id="wizard">
+ <div class="section-head"><div class="num">04</div><h2>Complete the setup wizard</h2></div>
+ <p>The setup wizard appears every time the application launches.</p>
+ <div class="grid">
+  <div class="tile"><b>YES · Hardware bridge</b><p>Choose this if you use a Waveshare RP2350 or Adafruit RP2040 HID bridge.</p></div>
+  <div class="tile"><b>NO · Software controller</b><p>Choose this for the software virtual controller (ViGEmBus).</p></div>
+ </div>
+ <p>Closing the wizard counts as <b>NO</b>. You can change the selection later under <b>Input → Hardware bridge</b>.</p>
+</section>
+<section class="section" id="engine">
+ <div class="section-head"><div class="num">05</div><h2>Start the engine</h2></div>
+ <p>When the panel opens, press <b>START ENGINE</b> in the top-right corner. Allow a moment for the model to load.</p>
+</section>
+<section class="section" id="controls">
+ <div class="section-head"><div class="num">06</div><h2>In-game controls</h2></div>
+ <div class="grid">
+  <div class="tile"><b><kbd>Right mouse</kbd> (hold)</b><p>Aim Assist activation.</p></div>
+  <div class="tile"><b><kbd>G</kbd></b><p>Triggerbot activation.</p></div>
+  <div class="tile"><b><kbd>END</kbd></b><p>Panic key — stops everything.</p></div>
+  <div class="tile"><b>Rebinding</b><p>Change keys in Aim Assist → Activation or Input → Panic control. The bind dialog also accepts mouse buttons.</p></div>
+ </div>
+</section>
+<section class="section" id="input">
+ <div class="section-head"><div class="num">07</div><h2>Mouse and virtual controller</h2></div>
+ <h3>Virtual controller</h3>
+ <p>The reference output is the ViGEm virtual pad. It is created when the engine starts and remains connected for the session. The sticks return to neutral when aim is not active.</p>
+ <h3>Mouse mode</h3>
+ <p><b>Mouse</b> on the Input page is the alternative mode. It uses synthetic cursor movement without a virtual pad. The supplied guide describes it for games that do not respond to the virtual pad.</p>
+ <div class="note">The setup wizard's virtual controller option uses ViGEmBus. The guide identifies the RP2350 / RP2040 HID bridge as the hardware alternative.</div>
+</section>
+<section class="section" id="process">
+ <div class="section-head"><div class="num">08</div><h2>How the system works</h2></div>
+ <ol>
+  <li><b>Capture:</b> obtains a square field of view around the screen centre, using GPU capture through DXCam or a GDI DIB path.</li>
+  <li><b>Detect:</b> the YOLO session returns detection boxes and confidence values.</li>
+  <li><b>Track:</b> IoU and centre matching maintain target identity between frames, estimate movement and handle temporary occlusion.</li>
+  <li><b>Aim:</b> the predicted aim point is eased using a curve, speed cap, reaction window and micro-jitter setting.</li>
+ </ol>
+</section>
+<section class="section" id="safety">
+ <div class="section-head"><div class="num">09</div><h2>Safety and focus behaviour</h2></div>
+ <ul>
+  <li>The supplied documentation describes screen-pixel capture, with no game-memory read or write, hooks or injection.</li>
+  <li>Focus gate: input is active only while the game window is in the foreground.</li>
+  <li>The panic key remains armed.</li>
+  <li>The overlay is click-through and does not interact with the game process.</li>
+  <li>Hold-to-aim: no input is sent unless the activation key is held.</li>
+  <li>The HUD displays a field-of-view ring and crosshair. The guide says it does not display player boxes, tracers, labels or a telemetry panel.</li>
+ </ul>
+ <div class="note warn">Use software only where permitted by the game and its rules. A screen-only design does not guarantee that a game's anti-cheat or terms of service permit it.</div>
+</section>
+<section class="section" id="pages">
+ <div class="section-head"><div class="num">10</div><h2>Explore the panel pages</h2></div>
+ <p>Each page has a master switch at the top, with its settings underneath.</p>
+ <div class="grid">
+  <div class="tile"><b>Aim Assist</b><p>Field-of-view ring, aim point, smoothing, activation mode and telemetry.</p></div>
+  <div class="tile"><b>Triggerbot</b><p>Fire key, reaction window and burst behaviour.</p></div>
+  <div class="tile"><b>Controls</b><p>Mouse and keyboard behaviour, plus panic control.</p></div>
+  <div class="tile"><b>Hardware</b><p>Virtual controller (DS4 / Xbox), mouse and RP2350 HID bridge.</p></div>
+  <div class="tile"><b>Overlay</b><p>Field-of-view ring, crosshair shape, colours and thickness.</p></div>
+  <div class="tile"><b>Colours</b><p>Live colour settings throughout the panel. Factory reset restores the blue-glass palette.</p></div>
+  <div class="tile"><b>License</b><p>Build identity and licence key.</p></div>
+ </div>
+</section>
+<section class="section" id="tips">
+ <div class="section-head"><div class="num">11</div><h2>Quick tips</h2></div>
+ <ul>
+  <li><b>Field of view:</b> the documented range is 0–350 px.</li>
+  <li><b>Smoothing:</b> 0 is described as immediate movement; 100 as gradual movement. The supplied guide mentions 10–30 as a reference range.</li>
+  <li><b>Crosshair shake:</b> the guide suggests reviewing reaction-window and micro-jitter settings.</li>
+  <li><b>Performance:</b> if the game stutters, the guide suggests Standard capture and disabling rainbow overlay animations.</li>
+  <li><b>Display mode:</b> the HUD is described as re-arming after a fullscreen / windowed display-mode change.</li>
+  <li><b>Controller setup:</b> the guide lists ViGEmBus as a requirement for the virtual controller option.</li>
+  <li><b>Streaming:</b> the overlay can be switched off from the Overlay page.</li>
+ </ul>
+</section>
+<section class="section" id="config">
+ <div class="section-head"><div class="num">12</div><h2>Configuration and reset</h2></div>
+ <p>Settings are written to <code>runtime\config.json</code> whenever they change.</p>
+ <h3>Full configuration reset</h3>
+ <ol>
+  <li>Close HydraX.</li>
+  <li>Delete the following files:</li>
+ </ol>
+ <pre>runtime\config.json
+runtime\ui_theme.json
+runtime\login.json</pre>
+ <ol start="3"><li>Start HydraX again.</li></ol>
+ <div class="note">Inside the panel, <b>Colours → Reset to factory</b> resets only the palette and glass toggles. It keeps the session name and the rest of the configuration intact.</div>
+ <h3>System requirements</h3>
+ <p>Windows 10 / 11 (64-bit) and a DirectML-capable GPU or a capable CPU.</p>
+</section>
+</main>
+</div>
+<footer><div class="wrap">HYDRAX AI · v3.0 · OFX BUILD <span style="float:right">Step-by-step reference</span></div></footer>
+</body>
+</html>
